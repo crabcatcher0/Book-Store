@@ -1,9 +1,8 @@
-# My Project
 
 Welcome to Online Book Store
 
 ## Installation
-- Clone the repository: `git clone https://github.com/crabcatcher0/Book-Store.git`
+- Clone the repository: `https://github.com/crabcatcher0/Book-Store.git`
 - Install dependencies: `pip install -r requirements.txt`
 
 ## Usage
