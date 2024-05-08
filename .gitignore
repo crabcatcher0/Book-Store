@@ -3,6 +3,8 @@
 
 ### Django ###
 .vscode
+vscode
+.vscode
 *.log
 *.pot
 *.pyc
