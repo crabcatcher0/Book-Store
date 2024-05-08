@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+
+<section class="hero-section py-5 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1>Welcome to Our Book Store.</h1>
+        <h4 class="lead">
+          Discover a vast collection of books and unleash your reading passion.
+        </h4>
+        <a href="{% url 'books' %}" class="btn btn-success btn-m"
+          >Explore Now</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Featured Books</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      {% for data in featured_data %}
+      <div class="col">
+        <a href="{% url 'detail' id=data.id %}" class="card-link">
+          <div class="card h-100 featured-book">
+            <img src="{{ data.image.url }}" class="card-img-top" alt="Book 1" />
+            <div class="card-body">
+              <h5 class="card-title" style="color: black">
+                {{ data.book_title }}
+              </h5>
+              <p class="card-text" style="color: black">
+                Price: Rs.{{ data.book_price }}
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}
